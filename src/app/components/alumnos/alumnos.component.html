@@ -1,0 +1,31 @@
+<article>
+  <h2 *ngIf="alumno.rut; then aquiIf; else aquiElse"></h2>
+  <ng-template #aquiIf>
+    <h2>{{ alumno.rut }}</h2>
+  </ng-template>
+  <ng-template #aquiElse>
+    <h2>Sin rut</h2>
+  </ng-template>
+  <h2 *ngIf="alumno.nombre; then aquiIf; else aquiElse"></h2>
+  <ng-template #aquiIf>
+    <h2>{{ alumno.nombre }}</h2>
+  </ng-template>
+  <ng-template #aquiElse>
+    <h2>Sin nombre</h2>
+ </ng-template>
+  <p *ngIf="alumno.apellido; then ifApellido; else elseApellido"></p>
+  <ng-template #ifApellido>
+    <p> {{ alumno.apellido }} </p>
+  </ng-template>
+  <ng-template #elseApellido>
+    <p>Sin apellido</p>
+  </ng-template>
+  <p *ngIf="alumno.edad; then ifEdad; else elseEdad"></p>
+  <ng-template #ifEdad>
+    <p> {{ alumno.edad }} </p>
+  </ng-template>
+  <ng-template #elseEdad>
+    <p>Sin edad</p>
+  </ng-template>
+  <button (click)="emitirId()">Eliminar alumno</button>
+</article>

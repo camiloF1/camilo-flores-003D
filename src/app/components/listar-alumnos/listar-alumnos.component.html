@@ -1,0 +1,7 @@
+<section>
+<app-alumnos>
+    *ngFor="let item of alumno"
+    [alumno]="item"
+    (idAlumno)="escucharId($event)"
+</app-alumnos>
+</section>
